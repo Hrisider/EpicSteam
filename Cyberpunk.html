@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="navstyle.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="downbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+   <script src="navscript.js" defer></script>
+    <title>Document</title>
+  <style>
+
+      @media screen and (min-width: 769px) {
+        .sec-fv {
+            min-height:max(100vh,700px)
+        }
+      }
+      body
+      {
+        background-color: black;
+      }
+      video
+      {
+        width: 100%;
+        height: auto;
+      }
+      h2
+      {
+        margin-inline-start: 80px;
+        margin-inline-end: 80px;
+        color: rgb(230, 230, 0);
+        text-align: center;
+        font-family:"Play";
+      }
+      h1
+      {
+        margin-left: 50px;
+        color: black;
+        margin-top: 100px;
+        font-family: "Play";
+        width: 90vh;
+        height: auto;
+        font-size: 100%;
+      }
+      .content 
+      {
+        margin-left: 100px;
+        margin-top: -1000px;
+        bottom: 0;
+        width: 100%;
+        scale: 100%;
+      }
+      .btn-1,
+      .btn-1:after {
+        width: 150px;
+        height: 76px;
+        line-height: 78px;
+        font-size: 20px;
+        font-family: 'Bebas Neue', sans-serif;
+        background: linear-gradient(-45deg, transparent 5%, #02d7f2 5%);
+        border: 0;
+        color: #000000;
+        letter-spacing: 3px;
+        outline: transparent;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .btn-1:after {
+        --slice-0: inset(50% 50% 50% 50%);
+        --slice-1: inset(80% -6px 0 0);
+        --slice-2: inset(50% -6px 30% 0);
+        --slice-3: inset(10% -6px 85% 0);
+        --slice-4: inset(40% -6px 43% 0);
+        --slice-5: inset(80% -6px 5% 0);
+        
+        content: 'ALTERNATE TEXT';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(-45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+        text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+        clip-path: var(--slice-0);
+      }
+
+      .btn-1:hover:after {
+        animation: 1s glitch;
+        animation-timing-function: steps(2, end);
+      }
+
+      @keyframes glitch {
+        0% {
+          clip-path: var(--slice-1);
+          transform: translate(-20px, -10px);
+        }
+        10% {
+          clip-path: var(--slice-3);
+          transform: translate(10px, 10px);
+        }
+        20% {
+          clip-path: var(--slice-1);
+          transform: translate(-10px, 10px);
+        }
+        30% {
+          clip-path: var(--slice-3);
+          transform: translate(0px, 5px);
+        }
+        40% {
+          clip-path: var(--slice-2);
+          transform: translate(-5px, 0px);
+        }
+        50% {
+          clip-path: var(--slice-3);
+          transform: translate(5px, 0px);
+        }
+        60% {
+          clip-path: var(--slice-4);
+          transform: translate(5px, 10px);
+        }
+        70% {
+          clip-path: var(--slice-2);
+          transform: translate(-10px, 10px);
+        }
+        80% {
+          clip-path: var(--slice-5);
+          transform: translate(20px, -10px);
+        }
+        90% {
+          clip-path: var(--slice-1);
+          transform: translate(-10px, 0px);
+        }
+        100% {
+          clip-path: var(--slice-1);
+          transform: translate(0);
+        }
+      }
+
+      @media (min-width: 768px) {
+        .btn-1,
+        .btn-1:after {
+          width: 200px;
+          height: 86px;
+          line-height: 88px;
+        }
+      }
+      .sub-text {
+    font-size: 1.5em; 
+    color: rgb(230, 230, 0);
+    text-align: center;
+    font-family: "Play";
+    text-align: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1; 
+    transition: opacity 10s ease;
+    }
+  </style>
+</head>
+<body>
+    <footer>
+        <nav class="nav">
+            <i class="uil uil-bars navOpenBtn"></i>
+            <a href="MainStorepage.html" class="logo">Epic Steam</a>
+      
+            <ul class="nav-links">
+              <i class="uil uil-times navCloseBtn"></i>
+              <li><a href="MainStorepage.html">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+      
+            <i class="uil uil-search search-icon" id="searchIcon"></i>
+            <div class="search-box">
+              <i class="uil uil-search search-icon"></i>
+              <input type="text" placeholder="Search here..." />
+            </div>
+        </nav>
+      </footer>
+    <div class="background-video">
+        <video poster="https://www.cyberpunk.net/build/images/home12/cover-1920-bd460362.jpg"
+            autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline">
+            <source src="CyberCocksVideoForFuckingSite.mp4" type="video/mp4" style="max-inline-size:100%;block-size:auto;">
+          </video>
+          
+    </div>
+    <div class="content">
+      <img src="CyberLogo.png" alt="600px">
+      <h1 style="font-size:10vw"> THE ULTIMATE CYBERPUNK 2077 EXPERIENCE</h1>
+        <a href="#">
+          <button class="btn-1" style="color: black;">BUY NOW</button>
+        </a>
+        <a href="#">
+          <button class="btn-1">LEARN MORE</button>
+        </a>
+      </div>
+    <h2 class="sub-text" id="subText"> От всепризнатото студио CD Projekt RED, създателите на The Witcher 3: Wild Hunt, сега идва едно ново, дистопично преживяване.
+      Потопете се във вселената на Cyberpunk, от оригиналния сюжет на Cyberpunk 2077 и неговото завладяващо
+      шпионско-трилър DLC Phantom Liberty до награждавания аниме сериал Cyberpunk: Edgerunners — 
+      има безброй истории за откриване в смъртоносния мегаполис Night City.</h2>
+      <video controls autoplay>
+        <source src="Cyberpunk 2077 — Official E3 2018 Trailer.mp4" type="video/mp4">
+      </video>
+
+      <script>
+        // Store the original text content
+        const subText = document.getElementById('subText');
+        const originalText = subText.innerText.trim();
+
+        // Function to scramble text
+        function scrambleText(text) {
+            return text.split(' ').map(word => word.split('').sort(() => Math.random() - 0.5).join('')).join(' ');
+        }
+
+        // Function to handle scroll events
+        function handleScroll() {
+            // Restore the original text if it's in the viewport
+            if (isInViewport(subText)) {
+                subText.innerText = originalText;
+                setTimeout(() => {
+                    subText.innerText = originalText;
+                }, 4000); // Delay for 4 seconds before restoring the original text
+            } else {
+                // Scramble the text if it's not in the viewport
+                subText.innerText = scrambleText(originalText);
+            }
+        }
+
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Add event listener for scroll events
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial check on page load
+        handleScroll();
+        
+        
+    </script>
+</body>
+</html>
